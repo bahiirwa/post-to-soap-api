@@ -1,8 +1,8 @@
 <?php
 
-add_action( 'save_post', 'pms_post_published_notification', 10, 2 );
+add_action( 'save_post', 'post_agent_to_property_24_website', 10, 2 );
 
-function pms_post_published_notification( $post_id, $post ) {
+function post_agent_to_property_24_website( $post_id, $post ) {
     
     // Makse sure it is a new Agent post.
     if ( wp_is_post_revision( $post_id ) || wp_is_post_autosave( $post_id ) ) return;

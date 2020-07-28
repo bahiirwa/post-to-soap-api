@@ -54,9 +54,10 @@ function property24_theme_default_input_options() {
 	
 	$defaults = array(
 		// 25%
-		'property24_user_email'    => '',
-		'property24_user_password' => '',
-		'property24_agency_id'     => '',
+		'property24_user_email'        => '',
+		'property24_user_password'     => '',
+		'property24_agency_id'         => '',
+		'auction_property_taxonomy_id' => '162',
 	);
 	
 	return apply_filters( 'property24_theme_default_input_options', $defaults );
@@ -122,6 +123,10 @@ function property24_tax_accounts_callback() {
 	$html .= '<p><label for="property24_agency_id">Agency ID:<br>';
 		$property24_agency_id = ! empty( $options['property24_agency_id'] ) ? $options['property24_agency_id'] : '';
 		$html .= '<input type="text" id="property24_agency_id" name="property24_notifications_settings[property24_agency_id]" value="' . $property24_agency_id . '" /></p>';
+	
+	$html .= '<p><label for="auction_property_taxonomy_id">Agency ID:<br>';
+		$auction_property_taxonomy_id = ! empty( $options['auction_property_taxonomy_id'] ) ? $options['auction_property_taxonomy_id'] : '';
+		$html .= '<input type="text" id="auction_property_taxonomy_id" name="property24_notifications_settings[auction_property_taxonomy_id]" value="' . $property24_agency_id . '" /></p>';
 	
 	echo $html;
 
